@@ -1,7 +1,7 @@
 # CLI-Novel
 CLI Visual novel made in Java
 
--Visual Novel
+<br>-Visual Novel</br>
 -Commandline Dialog / Story
 -Enter Taste zur nächsten line (Gameloop)
 -Entscheidungen mit 1, 2, 3 Tasten

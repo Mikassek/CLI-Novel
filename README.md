@@ -12,9 +12,10 @@ CLI Visual novel made in Java
 <br>-Nuklearer Winter Survival
 
 <br>-3 Endigs
-<br>->Nuclear Poisoning Ending
-<br>->Hunger Death
-<br>->Saved Ending
+<br>->Nuclear Poisoning Ending 
+<br>->Hunger Death                  
+<br>->Saved Ending             
+ 
 
 <br>-Chelyabinsk
 <br>-POV Character

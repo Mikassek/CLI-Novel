@@ -1,3 +1,7 @@
 Hallo Welt!
 Das ist der Dialog
 Dieser Dialog soll später in der CLI angezeigt werden.
+Magst du diesen Dialog? [AUSWAHL]
+Warum?
+ok
+besser so

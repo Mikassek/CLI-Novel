@@ -23,7 +23,7 @@ public class GameFrame {
 		//Fenster Sichtbarkeit umschalten.
 		window.setVisible(true);
 		
-		System.out.println("Fenster erfolgreich geladen");
+		System.out.println("GameFrame erfolgreich geladen");
 		
 	}
 

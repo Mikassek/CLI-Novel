@@ -1,24 +1,12 @@
 Hallo Welt!
 Das ist der Dialog
 Dieser Dialog soll später in der CLI angezeigt werden.
-
-<option_1>
-
-    Magst du diesen Dialog?
-        <b1>Button 1</b1>
-        <b2>Button 2</b2>
-        <b3>Button 3</b3>
-
-<a1>
+Magst du diesen Dialog?  [AUSWAHL]
+    Ja
+    Nein 
+    Vielleicht
     auswahl 1
-</a1>
-
-<a2>
     auswahl 2
-</a2>
-
-<a3>
     auswahl 3
-</a3>
 
-</option_1>
+

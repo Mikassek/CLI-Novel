@@ -22,6 +22,8 @@ public class GameFrame {
 		window.setLocationRelativeTo(null);
 		//Fenster Sichtbarkeit umschalten.
 		window.setVisible(true);
+		// ???
+		GamePanel.requestFocusInWindow();
 		
 		System.out.println("GameFrame erfolgreich geladen");
 		

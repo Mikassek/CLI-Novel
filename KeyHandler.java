@@ -8,6 +8,7 @@ public class KeyHandler implements KeyListener {
 
 	public KeyHandler(GamePanel gamePanel) {
 		this.gamePanel = gamePanel;
+		System.out.println("KeyHandler erfolgreich geladen");
 	}
 
 	@Override

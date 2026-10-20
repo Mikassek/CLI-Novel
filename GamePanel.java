@@ -62,7 +62,7 @@ public class GamePanel extends JPanel {
             JPanel ButtonPanel = new JPanel(new GridBagLayout());
             ButtonPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK)); 
             
-        this.add(ButtonPanel);
+       
         b = new JButton("test");
         b1= new JButton("test");
         b2 = new JButton("test");
@@ -73,6 +73,7 @@ public class GamePanel extends JPanel {
         buttons.add(b2);
         ButtonPanel.add(buttons);
         this.add(ButtonPanel, BorderLayout.CENTER);
+         
         //b.addActionListener(new ActionListener);
      
         try {

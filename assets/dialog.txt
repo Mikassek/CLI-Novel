@@ -5,7 +5,16 @@ Magst du diesen Dialog?  [AUSWAHL]
     Ja
     Nein 
     Vielleicht
-    auswahl 1
+    Du ließt weiter....
+    du bemerkst das es hier keinen plot gibt
+    du bemerkst das das eine test-datei ist.
+    du denkst dir warum es weiter geht. 
+    du siehst das ich hier 10 zeilen schreiben muss
+    du bereust deine entscheidung Ja gedrückt zu haben
+    blabla 
+    blabla chelyabinsk
+    blabla gloomcore o algo
+    endlich fertig [AUSWAHL]
     auswahl 2
     auswahl 3
 

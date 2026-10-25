@@ -2,9 +2,9 @@ Hallo Welt!
 Das ist der Dialog
 Dieser Dialog soll später in der CLI angezeigt werden.
 Magst du diesen Dialog?  [AUSWAHL]
-    Ja
-    Nein 
-    Vielleicht
+GOTO1,8,    Ja 
+GOTO2, 18,    Nein 
+GOTO, 19,    Vielleicht
     Du ließt weiter....
     du bemerkst das es hier keinen plot gibt
     du bemerkst das das eine test-datei ist.
@@ -17,5 +17,4 @@ Magst du diesen Dialog?  [AUSWAHL]
     endlich fertig [AUSWAHL]
     auswahl 2
     auswahl 3
-
 

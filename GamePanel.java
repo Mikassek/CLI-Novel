@@ -164,9 +164,9 @@ public class GamePanel extends JPanel {
             b1.setText(d2[2]);
             b2.setText(d3[2]);
 
-             target1 = Integer.parseInt(d1[1]);
-             target2 = Integer.parseInt(d2[1]);
-             target3 = Integer.parseInt(d3[1]);
+             target1 = Integer.parseInt(d1[1]) - 1;
+             target2 = Integer.parseInt(d2[1]) - 1;
+             target3 = Integer.parseInt(d3[1]) - 1;
         }        
        
     }

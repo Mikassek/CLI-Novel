@@ -3,8 +3,8 @@ Das ist der Dialog
 Dieser Dialog soll später in der CLI angezeigt werden.
 Magst du diesen Dialog?  [AUSWAHL]
 GOTO1,8,    Ja 
-GOTO2, 18,    Nein 
-GOTO, 19,    Vielleicht
+GOTO2,18,    Nein 
+GOTO,19,    Vielleicht
     Du ließt weiter....
     du bemerkst das es hier keinen plot gibt
     du bemerkst das das eine test-datei ist.

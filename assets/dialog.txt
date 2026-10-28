@@ -1,20 +1,47 @@
-Hallo Welt!
-Das ist der Dialog
-Dieser Dialog soll später in der CLI angezeigt werden.
-Magst du diesen Dialog?  [AUSWAHL]
-GOTO1,8,    Ja 
-GOTO2,18,    Nein 
-GOTO,19,    Vielleicht
-    Du ließt weiter....
-    du bemerkst das es hier keinen plot gibt
-    du bemerkst das das eine test-datei ist.
-    du denkst dir warum es weiter geht. 
-    du siehst das ich hier 10 zeilen schreiben muss
-    du bereust deine entscheidung Ja gedrückt zu haben
-    blabla 
-    blabla chelyabinsk
-    blabla gloomcore o algo
-    endlich fertig [AUSWAHL]
-    auswahl 2
-    auswahl 3
+[klassenzimmer.jpg]Heute war ein Tag wie jeder andere, es fühlt sich an als wäre ich in einer endlosschleife gefangen. 
+Das Klassenzimmer ist fast leer, die letzten Schüler packen ihre sachen um schnell nach hause gehen. Ich hingegen mache nichts, es gibt nichts worauf ich mich beeilen muss.
+...
+Ich drehe mein Kopf nach links und werfe einen Blick aus dem Fenster. Es ist dunkel, als ob es gleich anfangen würde zu regen.
+MC: Das Wetter ist echt mies.
+Flüßtere ich.
+Ich wünschte ich könnte hier bis zum nächsten Morgen übernachten. 
+...
+Ich bin viel zu müde.
+.
+..
+...
+Lehrer: GUTEN MORGEN!!! 
+Lehrer: Es wird langsam zeit dass du gehst, jeden Tag das selbe mit dir!
+MC: hmmm
+MC: Ja ich mach ja schon.
+[HINTERGRUNDCHANGE]Es regnet tatsächlich, wie viel glück kann man denn bitte haben? Ich habe sogar mein Regenschirm vergessen.
+MC: Was mach ich jetzt?
+...
+???: Hey!
+???: Hallo!
+!
+CHARACTER_A: Warum wartest du nicht auf mich?
+CHARACTER_A: haa... haa...
+MC: Warum bist du noch in der Schule?
+CHARACTER_A: Ich hatte noch was zu tun.
+CHARACTER_A: Es scheint so als ob es regnet.
+Nein! 
+Wirklich?? 
+Das wusste ich jetzt aber nicht.
+MC: Ja du hast recht. Ich habe leider meinen Regenschirm vergessen.
+[AUSWAHL]CHARACTER_A: Keine sorge! Ich habe eins dabei, wir können uns es teilen.
+GOTO1;38;Akzeptieren
+GOTO2;42;Ablehnen
+GOTO3;46;Wegrennen
 
+akzeptieren {
+So liefen wir los, der Regen wie Artillerie der auf unser Regenschirm kracht.
+}
+
+Ablehnen {
+MC: Nein danke, ich komme schon ohne dich klar.
+}
+
+Wegrennen {
+*Phew*
+}

@@ -1,0 +1,13 @@
+Hallo Welt!
+Das ist der Dialog
+Dieser Dialog soll später in der CLI angezeigt werden.
+Magst du diesen Dialog?  [AUSWAHL]
+GOTO1;8;Ja 
+GOTO2;9;Nein 
+GOTO;10;Vielleicht
+Du ließt weiter....
+du bemerkst das es hier keinen plot gibt
+du bemerkst das das eine test-datei ist.
+du denkst dir warum es weiter geht. 
+du siehst das ich hier 10 zeilen schreiben muss
+du bereust deine entscheidung Ja gedrückt zu haben

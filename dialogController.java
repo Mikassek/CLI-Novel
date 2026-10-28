@@ -15,7 +15,7 @@ public class dialogController {
         gamePanel.addKeyListener(keyHandler);
 
         try {
-            zeilen = Files.readAllLines(Path.of("assets", "dialog.txt"));
+            zeilen = Files.readAllLines(Path.of("CLI-Novel", "assets", "dialog.txt"));
             zeigeDialog();
         } catch (IOException e) {
             System.out.println("dialog.txt konnte nicht gefunden werden.");

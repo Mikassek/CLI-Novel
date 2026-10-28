@@ -56,7 +56,7 @@ public class gamePanel extends JPanel {
         dialog.setText("<html><div style=\"width:480px;\">" + text + "</div><html>");
     }
 
-    Image hintergrundbild = Toolkit.getDefaultToolkit().createImage("CLI-Novel/assets/hintergrundbild.jpg");
+    Image hintergrundbild = Toolkit.getDefaultToolkit().createImage("assets/hintergrundbild.jpg");
     @Override 
     protected void paintComponent(Graphics graphics) {
         graphics.drawImage(hintergrundbild, 0, 0, getWidth(), getHeight(), this);

@@ -13,9 +13,11 @@ import javax.swing.BorderFactory;
 
 public class gamePanel extends JPanel {
 
-    static int bildschirmBreite = 640;
+    int bildschirmBreite = 640;
     int bildschirmHoehe = 480;
-    static JLabel dialog;
+    JLabel dialog;
+    dialogController dialogController;
+    choiseController choiseController;
 
     public gamePanel() {
 
@@ -32,14 +34,13 @@ public class gamePanel extends JPanel {
         dialog.setFont(new Font("Calibri", Font.PLAIN, 16));
         dialog.setHorizontalAlignment(SwingConstants.LEFT);
         textPanel.add(dialog, BorderLayout.NORTH);
-        new dialogController(this);
+
+        dialogController = new dialogController(this);
+        choiseController = dialogController.getChoiseController();
 
         JPanel buttonPanel = new JPanel(new GridBagLayout());
         buttonPanel.setOpaque(false);
         add(buttonPanel, BorderLayout.CENTER);
-
-        //buttons & logik
-        new choiseController(this);
 
         JPanel buttonWrapper = new JPanel(new GridLayout(3, 1, 0, 10));
         buttonWrapper.setOpaque(false);
@@ -48,11 +49,14 @@ public class gamePanel extends JPanel {
         buttonWrapper.add(choiseController.button3);
         buttonPanel.add(buttonWrapper);
 
+        addKeyListener(new keyHandler(dialogController));
+        dialogController.start();
+
         System.out.println("gamePanel erfolgreich geladen");
     }
 
     // gamePanel & dialogController verbindung
-    public static void setTextDialog(String text) {
+    public void setTextDialog(String text) {
         dialog.setText("<html><div style=\"width:480px;\">" + text + "</div><html>");
     }
 

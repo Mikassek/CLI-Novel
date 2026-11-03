@@ -5,14 +5,22 @@ import java.util.List;
 
 public class dialogController {
 
-    static List<String> zeilen;
-    static int dialogIndex = 0;
-    static boolean aufAuswahlWarten = false;
+    List<String> zeilen;
+    int dialogIndex = 0;
+    boolean aufAuswahlWarten = false;
+    gamePanel gamePanel;
+    choiseController choiseController;
 
     public dialogController(gamePanel gamePanel) {
+        this.gamePanel = gamePanel;
+        this.choiseController = new choiseController(this);
+    }
 
-        keyHandler keyHandler = new keyHandler();
-        gamePanel.addKeyListener(keyHandler);
+    public choiseController getChoiseController() {
+        return choiseController;
+    }
+
+    public void start() {
 
         try {
             zeilen = Files.readAllLines(Path.of("CLI-Novel", "assets", "dialog.txt"));
@@ -25,7 +33,7 @@ public class dialogController {
 
     }
 
-    public static void zeigeDialog() {
+    public void zeigeDialog() {
         String zeile = zeilen.get(dialogIndex);
         gamePanel.setTextDialog(zeile);
 
@@ -40,7 +48,7 @@ public class dialogController {
 
     }
 
-    public static void skipDialog() {
+    public void skipDialog() {
 
         if (aufAuswahlWarten == true) {
             return;
@@ -51,6 +59,12 @@ public class dialogController {
             zeigeDialog();
         }
 
+    }
+
+    public void waehleZiel(int zielZeile) {
+        aufAuswahlWarten = false;
+        dialogIndex = zielZeile - 1;
+        zeigeDialog();
     }
 
 }

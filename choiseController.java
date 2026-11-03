@@ -5,12 +5,14 @@ import javax.swing.JButton;
 
 public class choiseController {
 
-    static JButton button1 = new JButton("test");
-    static JButton button2 = new JButton("test");
-    static JButton button3 = new JButton("test");
-    static int[] zielZeilen = new int[3];
+    JButton button1 = new JButton("test");
+    JButton button2 = new JButton("test");
+    JButton button3 = new JButton("test");
+    int[] zielZeilen = new int[3];
+    dialogController dialogController;
 
-    public choiseController(gamePanel gamePanel) {
+    public choiseController(dialogController dialogController) {
+        this.dialogController = dialogController;
         button1.setBackground(Color.WHITE);
         button2.setBackground(Color.WHITE);
         button3.setBackground(Color.WHITE);
@@ -24,7 +26,7 @@ public class choiseController {
         System.out.println("choiseController erfolgreich geladen");
     }
 
-    public static void zeigeAuswahl(List<String> zeilen, int auswahlIndex) {
+    public void zeigeAuswahl(List<String> zeilen, int auswahlIndex) {
         String[] auswahl1 = zeilen.get(auswahlIndex + 1).split(";");
         String[] auswahl2 = zeilen.get(auswahlIndex + 2).split(";");
         String[] auswahl3 = zeilen.get(auswahlIndex + 3).split(";");
@@ -36,14 +38,12 @@ public class choiseController {
         zielZeilen[2] = Integer.parseInt(auswahl3[1].trim());
     }
 
-    public static void auswahlZiel(int nummer) {
-        dialogController.aufAuswahlWarten = false;
+    public void auswahlZiel(int nummer) {
         zeigeButtons(false);
-        dialogController.dialogIndex = zielZeilen[nummer] - 1;
-        dialogController.zeigeDialog();
+        dialogController.waehleZiel(zielZeilen[nummer]);
     }
 
-    public static void zeigeButtons(boolean sichtbarkeit) {
+    public void zeigeButtons(boolean sichtbarkeit) {
         button1.setVisible(sichtbarkeit);
         button2.setVisible(sichtbarkeit);
         button3.setVisible(sichtbarkeit);

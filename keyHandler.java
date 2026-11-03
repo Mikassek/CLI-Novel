@@ -4,8 +4,10 @@ import java.awt.event.KeyListener;
 public class keyHandler implements KeyListener {
 
     boolean enterPressed;
+    dialogController dialogController;
     
-    public keyHandler() {
+    public keyHandler(dialogController dialogController) {
+        this.dialogController = dialogController;
         System.out.println("keyHandler erfolgreich geladen");
     }
 

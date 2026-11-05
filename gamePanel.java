@@ -4,14 +4,11 @@ import javax.swing.SwingConstants;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.Graphics;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
-import java.awt.Image;
-import java.awt.Toolkit;
 import javax.swing.BorderFactory;
 
-public class gamePanel extends JPanel {
+public class gamePanel extends backgroundController {
 
     int bildschirmBreite = 640;
     int bildschirmHoehe = 480;
@@ -58,11 +55,5 @@ public class gamePanel extends JPanel {
     // gamePanel & dialogController verbindung
     public void setTextDialog(String text) {
         dialog.setText("<html><div style=\"width:480px;\">" + text + "</div><html>");
-    }
-
-    Image hintergrundbild = Toolkit.getDefaultToolkit().createImage("CLI-Novel/assets/hintergrundbild.jpg");
-    @Override 
-    protected void paintComponent(Graphics graphics) {
-        graphics.drawImage(hintergrundbild, 0, 0, getWidth(), getHeight(), this);
     }
 }

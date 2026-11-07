@@ -1,14 +1,20 @@
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
-public class gamePanel extends backgroundController {
+public class gamePanel extends JPanel {
 
     int bildschirmBreite = 640;
     int bildschirmHoehe = 480;
@@ -21,6 +27,46 @@ public class gamePanel extends backgroundController {
         setPreferredSize(new Dimension(bildschirmBreite, bildschirmHoehe));
         setLayout(new BorderLayout());
         setFocusable(true);
+
+
+        JPanel savepanel = new JPanel(new GridLayout(1, 3, 5, 0));
+        add(savepanel, BorderLayout.NORTH);
+        savepanel.setOpaque(false);
+        
+
+
+        JButton SpeicherButton = new JButton("Speichern");
+        SpeicherButton.setFocusable(false);
+        savepanel.add(SpeicherButton);
+        SpeicherButton.addActionListener(e -> {
+            saveGame save = new saveGame();
+            save.dialogController = dialogController;
+            save.saveGameCreate();
+            save.SaveGameWrite();
+        });
+        JButton LadenButton = new JButton("Laden");
+        LadenButton.setFocusable(false);
+        savepanel.add(LadenButton);
+            LadenButton.addActionListener(e -> {
+                saveGame save = new saveGame();
+                int index = save.SaveGameRead();
+                dialogController.dialogIndex = index;
+                dialogController.zeigeDialog();
+            });
+        JButton leerenButton = new JButton("Leeren");
+        leerenButton.setFocusable(false);
+        savepanel.add(leerenButton);
+        leerenButton.addActionListener(e -> {
+            saveGame save = new saveGame();
+            try {
+                FileWriter SaveWrite = new FileWriter("savegame.txt");
+                SaveWrite.write("0");
+                System.out.println("Savegame gelöscht");
+            } catch (IOException ex) {
+                System.out.println("Fehler beim Löschen des Savegames");
+                ex.printStackTrace();
+            }
+        });
 
         JPanel textPanel = new JPanel(new BorderLayout());
         textPanel.setPreferredSize(new Dimension(bildschirmBreite, bildschirmHoehe / 3));
@@ -55,5 +101,11 @@ public class gamePanel extends backgroundController {
     // gamePanel & dialogController verbindung
     public void setTextDialog(String text) {
         dialog.setText("<html><div style=\"width:480px;\">" + text + "</div><html>");
+    }
+
+    Image hintergrundbild = Toolkit.getDefaultToolkit().createImage("assets/hintergrundbild.jpg");
+    @Override 
+    protected void paintComponent(Graphics graphics) {
+        graphics.drawImage(hintergrundbild, 0, 0, getWidth(), getHeight(), this);
     }
 }

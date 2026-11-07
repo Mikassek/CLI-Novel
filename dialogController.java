@@ -4,9 +4,9 @@ import java.nio.file.Path;
 import java.util.List;
 
 public class dialogController {
-
     List<String> zeilen;
     int dialogIndex = 0;
+    
     boolean aufAuswahlWarten = false;
     gamePanel gamePanel;
     choiseController choiseController;
@@ -23,7 +23,7 @@ public class dialogController {
     public void start() {
 
         try {
-            zeilen = Files.readAllLines(Path.of("CLI-Novel", "assets", "dialog.txt"));
+            zeilen = Files.readAllLines(Path.of( "assets", "dialog.txt"));
             zeigeDialog();
         } catch (IOException e) {
             System.out.println("dialog.txt konnte nicht gefunden werden.");

@@ -36,12 +36,16 @@ GOTO3;46;Wegrennen
 
 akzeptieren {
 So liefen wir los, der Regen wie Artillerie der auf unser Regenschirm kracht.
+[MERGE;51
 }
 
 Ablehnen {
 MC: Nein danke, ich komme schon ohne dich klar.
+[MERGE;51
 }
 
 Wegrennen {
 *Phew*
+[MERGE;51
 }
+Hier bist du richtig

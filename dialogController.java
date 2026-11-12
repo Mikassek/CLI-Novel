@@ -56,6 +56,7 @@ public class dialogController {
 
         if (dialogIndex + 1 < zeilen.size()) {
             dialogIndex++;
+            merger();
             zeigeDialog();
         }
 
@@ -65,6 +66,15 @@ public class dialogController {
         aufAuswahlWarten = false;
         dialogIndex = zielZeile - 1;
         zeigeDialog();
+    }
+
+      public void merger() {
+        String zeile = zeilen.get(dialogIndex);
+        if (zeile.startsWith("[MERGE;")){
+            String[] mergetemp = zeilen.get(dialogIndex).split(";");
+            dialogIndex = Integer.parseInt(mergetemp[1]) -1;
+          
+        }
     }
 
 }

@@ -27,4 +27,9 @@ public class keyHandler implements KeyListener {
     public void keyTyped(KeyEvent e) {
     }
 
+    public void menu(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+          //  savepanel.setVisible(true);
+        }
+    }
 }

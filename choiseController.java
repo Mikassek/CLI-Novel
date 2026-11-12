@@ -1,6 +1,5 @@
 import java.awt.Color;
 import java.util.List;
-
 import javax.swing.JButton;
 
 public class choiseController {
@@ -37,6 +36,9 @@ public class choiseController {
         zielZeilen[1] = Integer.parseInt(auswahl2[1].trim());
         zielZeilen[2] = Integer.parseInt(auswahl3[1].trim());
     }
+
+  
+
 
     public void auswahlZiel(int nummer) {
         zeigeButtons(false);

@@ -1,21 +1,20 @@
 # CLI-Novel
-CLI Visual novel made in Java
 
-<br>-Visual Novel
-<br>-Commandline Dialog / Story
-<br>-Enter Taste zur nächsten line (Gameloop)
-<br>-Mehrere Entscheidungen mit Nummertasten
-<br>-SChwellenwert für entscheidungen
-<br>-Save System
+CLI visual novel made in Java.
 
-<br>Story:
-<br>-Nuklearer Winter Survival
+- Visual novel
+- Command-line dialogue and story
+- Press Enter to advance to the next line
+- Multiple choices with number keys
+- Decision thresholds
+- Save system
 
-<br>-3 Endigs
-<br>->Nuclear Poisoning Ending 
-<br>->Hunger Death                  
-<br>->Saved Ending             
- 
+## Story
 
-<br>-Chelyabinsk
-<br>-POV Character
+- Nuclear winter survival
+- Three endings:
+  - Nuclear poisoning ending
+  - Hunger death
+  - Saved ending
+- Chelyabinsk
+- Point-of-view character

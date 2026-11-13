@@ -1,51 +1,83 @@
-[klassenzimmer.jpg]Heute war ein Tag wie jeder andere, es fühlt sich an als wäre ich in einer endlosschleife gefangen. 
-Das Klassenzimmer ist fast leer, die letzten Schüler packen ihre sachen um schnell nach hause gehen. Ich hingegen mache nichts, es gibt nichts worauf ich mich beeilen muss.
+[BACKGROUND]klassenzimmer.jpg
+Heute war ein Tag wie jeder andere, es fühlt sich an, als wäre ich in einer Endlosschleife gefangen.
+Das Klassenzimmer ist fast leer. Die letzten Schüler packen ihre Sachen, um schnell nach Hause zu gehen. Ich hingegen mache nichts. Es gibt nichts, worauf ich mich beeilen muss.
 ...
-Ich drehe mein Kopf nach links und werfe einen Blick aus dem Fenster. Es ist dunkel, als ob es gleich anfangen würde zu regen.
-MC: Das Wetter ist echt mies.
-Flüßtere ich.
-Ich wünschte ich könnte hier bis zum nächsten Morgen übernachten. 
+Ich drehe meinen Kopf nach links und werfe einen Blick aus dem Fenster. Es ist dunkel, als ob es gleich anfangen würde zu regnen.
+Yuki: Das Wetter ist echt mies.
+Flüstere ich.
+Ich wünschte, ich könnte hier bis zum nächsten Morgen übernachten.
 ...
+[BACKGROUND]black.jpg
 Ich bin viel zu müde.
-.
-..
 ...
-Lehrer: GUTEN MORGEN!!! 
-Lehrer: Es wird langsam zeit dass du gehst, jeden Tag das selbe mit dir!
-MC: hmmm
-MC: Ja ich mach ja schon.
-[HINTERGRUNDCHANGE]Es regnet tatsächlich, wie viel glück kann man denn bitte haben? Ich habe sogar mein Regenschirm vergessen.
-MC: Was mach ich jetzt?
+Lehrer: GUTEN MORGEN!!!
+[BACKGROUND]klassenzimmer.jpg
+?!
+Lehrer: Es wird langsam Zeit, dass du gehst. Jeden Tag dasselbe mit dir!
+Yuki: Ich gehe ja schon.
+[BACKGROUND]schule_regen.jpg
+Es regnet tatsächlich. Wie viel Pech kann man haben? Ich habe sogar meinen Regenschirm vergessen.
+Yuki: Was mach ich jetzt?
 ...
-???: Hey!
-???: Hallo!
-!
-CHARACTER_A: Warum wartest du nicht auf mich?
-CHARACTER_A: haa... haa...
-MC: Warum bist du noch in der Schule?
-CHARACTER_A: Ich hatte noch was zu tun.
-CHARACTER_A: Es scheint so als ob es regnet.
-Nein! 
-Wirklich?? 
-Das wusste ich jetzt aber nicht.
-MC: Ja du hast recht. Ich habe leider meinen Regenschirm vergessen.
-[AUSWAHL]CHARACTER_A: Keine sorge! Ich habe eins dabei, wir können uns es teilen.
+???: *Hey!*
+???: *Hallo!*
+?!
+???: Warum wartest du nicht auf mich?
+???: Haa... haa...
+Yuki: Warum bist du noch in der Schule, Sora?
+Sora: Ich hatte Ordnungsdienst.
+Sora: Es scheint so, als ob es regnet.
+Nein, wirklich?!
+Yuki: Ja, du hast recht. Ich habe leider meinen Regenschirm vergessen.
+[AUSWAHL]Sora: Keine Sorge! Ich habe einen dabei, wir können ihn teilen.
 GOTO1;38;Akzeptieren
-GOTO2;42;Ablehnen
-GOTO3;46;Wegrennen
+GOTO2;53;Ablehnen
+GOTO3;72;Wegrennen
 
-akzeptieren {
-So liefen wir los, der Regen wie Artillerie der auf unser Regenschirm kracht.
-[MERGE;51
-}
+akzeptieren [
+[BACKGROUND]strasse_regen.jpg
+So liefen wir los. Der Regen prasselte wie Artillerie auf unseren Regenschirm.
+Wir quetschten uns beide unter den Regenschirm, als ob die Regentropfen giftig wären.
+Sora: Sag mal, hast du heute noch was vor?
+Yuki: Nein, aber mit diesem Wetter werde ich erst recht nichts unternehmen.
+Sora: Ach komm schon, wir müssen ja nicht nach draußen. Du kannst doch einfach zu mir kommen.
+Ich überlegte... Vielleicht wäre es doch eine gute Entscheidung.
+Wenn ich nach Hause gehen würde, müsste ich wieder mit meinen Eltern klarkommen.
+Yuki: Na gut.
+[BACKGROUND]black.jpg
+Und so übernachtete ich bei Sora.
+[MERGE];82
+]
 
-Ablehnen {
-MC: Nein danke, ich komme schon ohne dich klar.
-[MERGE;51
-}
+Ablehnen [
+[BACKGROUND]schule_regen.jpg
+Yuki: Nein danke, ich komme schon ohne dich klar.
+Sora: Aber du wirst ganz nass.
+Yuki: Ich habe gesagt, dass ich ohne dich klarkomme.
+Sora: Wie du meinst. Aber beschwer dich nicht wieder bei mir, wenn du dich plötzlich erkältest.
+Yuki: Ja, ja, tschüss. Komm gut nach Hause.
+Und so machte ich mich auf den Weg nach Hause.
+[BACKGROUND]zimmer.jpg
+*Gääähn*
+Yuki: Ich bin so müde.
+Yuki: Ich glaube, ich lege mich schlafen, bevor es dunkel wird.
+Ich kann bis zum heutigen Tag immer noch nicht gescheit schlafen. Der Vorfall vor einigen Jahren und ihre Erinnerungen verfolgen mich immer noch.
+Alles, was ich den ganzen Abend lang mache, ist, die Zimmerdecke in meinem Zimmer anzustarren.
+Und zu grübeln.
+Und das stundenlang, obwohl ich doch einfach nur schlafen möchte.
+[MERGE];82
+]
 
-Wegrennen {
+Wegrennen [
+[BACKGROUND]black.jpg
 *Phew*
-[MERGE;51
-}
-Hier bist du richtig
+Das war knapp.
+[BACKGROUND]zimmer.jpg
+Zum Glück bin ich ihm entkommen.
+Er schafft es immer, mich zu überreden, etwas mit ihm zu unternehmen.
+Ich habe wirklich keine Kraft und Energie mehr.
+[MERGE];82
+]
+
+[BACKGROUND]black.jpg
+Ende

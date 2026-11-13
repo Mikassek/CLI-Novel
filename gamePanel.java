@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagLayout;
@@ -32,6 +33,7 @@ public class gamePanel extends backgroundController {
         savepanel.setOpaque(false);
 
         JButton SpeicherButton = new JButton("Speichern");
+        SpeicherButton.setBackground(Color.WHITE);
         SpeicherButton.setFocusable(false);
         savepanel.add(SpeicherButton);
         SpeicherButton.addActionListener(e -> {
@@ -41,19 +43,20 @@ public class gamePanel extends backgroundController {
             save.SaveGameWrite();
         });
         JButton LadenButton = new JButton("Laden");
+        LadenButton.setBackground(Color.WHITE);
         LadenButton.setFocusable(false);
         savepanel.add(LadenButton);
-            LadenButton.addActionListener(e -> {
-                saveGame save = new saveGame();
-                int index = save.SaveGameRead();
-                dialogController.dialogIndex = index;
-                dialogController.zeigeDialog();
-            });
+        LadenButton.addActionListener(e -> {
+            saveGame save = new saveGame();
+            int index = save.SaveGameRead();
+            dialogController.dialogIndex = index;
+            dialogController.zeigeDialog();
+        });
         JButton leerenButton = new JButton("Leeren");
+        leerenButton.setBackground(Color.WHITE);
         leerenButton.setFocusable(false);
         savepanel.add(leerenButton);
         leerenButton.addActionListener(e -> {
-            saveGame save = new saveGame();
             try {
                 FileWriter SaveWrite = new FileWriter("savegame.txt");
                 SaveWrite.write("0");
@@ -66,7 +69,7 @@ public class gamePanel extends backgroundController {
         });
 
         JPanel textPanel = new JPanel(new BorderLayout());
-        textPanel.setPreferredSize(new Dimension(bildschirmBreite, bildschirmHoehe / 3));
+        textPanel.setPreferredSize(new Dimension(bildschirmBreite, bildschirmHoehe / 4));
         textPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
         add(textPanel, BorderLayout.SOUTH);
 
@@ -95,12 +98,11 @@ public class gamePanel extends backgroundController {
         System.out.println("gamePanel erfolgreich geladen");
     }
 
-    // gamePanel & dialogController verbindung
     public void setTextDialog(String text) {
         dialog.setText("<html><div style=\"width:480px;\">" + text + "</div><html>");
     }
-    public void setSaveMenu(boolean escapePressed){
-    
+
+    public void setSaveMenu(boolean escapePressed) {
         savepanel.setVisible(escapePressed);
     }
 }

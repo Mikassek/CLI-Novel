@@ -5,7 +5,7 @@ public class keyHandler implements KeyListener {
 
     boolean enterPressed;
     dialogController dialogController;
-    
+
     public keyHandler(dialogController dialogController) {
         this.dialogController = dialogController;
         System.out.println("keyHandler erfolgreich geladen");
@@ -17,10 +17,9 @@ public class keyHandler implements KeyListener {
             dialogController.skipDialog();
         }
         if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            dialogController.gamePanel.setSaveMenu( !dialogController.gamePanel.savepanel.isVisible());
-            }
+            dialogController.gamePanel.setSaveMenu(!dialogController.gamePanel.savepanel.isVisible());
         }
-    
+    }
 
     public void keyReleased(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_ENTER) {
@@ -32,6 +31,4 @@ public class keyHandler implements KeyListener {
 
     public void keyTyped(KeyEvent e) {
     }
-
-    
 }

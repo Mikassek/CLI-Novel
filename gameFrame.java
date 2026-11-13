@@ -1,6 +1,7 @@
 import javax.swing.JFrame;
 
 public class gameFrame {
+
     public gameFrame() {
         JFrame fenster = new JFrame();
         fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

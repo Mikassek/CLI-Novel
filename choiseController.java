@@ -37,9 +37,6 @@ public class choiseController {
         zielZeilen[2] = Integer.parseInt(auswahl3[1].trim());
     }
 
-  
-
-
     public void auswahlZiel(int nummer) {
         zeigeButtons(false);
         dialogController.waehleZiel(zielZeilen[nummer]);
@@ -50,5 +47,4 @@ public class choiseController {
         button2.setVisible(sichtbarkeit);
         button3.setVisible(sichtbarkeit);
     }
-
 }

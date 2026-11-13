@@ -16,6 +16,7 @@ public class gamePanel extends backgroundController {
     int bildschirmBreite = 640;
     int bildschirmHoehe = 480;
     JLabel dialog;
+    JPanel savepanel;
     dialogController dialogController;
     choiseController choiseController;
 
@@ -25,13 +26,10 @@ public class gamePanel extends backgroundController {
         setLayout(new BorderLayout());
         setFocusable(true);
 
-
-        JPanel savepanel = new JPanel(new GridLayout(1, 3, 5, 0));
-        savepanel.setVisible(true);
+        savepanel = new JPanel(new GridLayout(1, 3, 5, 0));
+        savepanel.setVisible(false);
         add(savepanel, BorderLayout.NORTH);
         savepanel.setOpaque(false);
-        
-
 
         JButton SpeicherButton = new JButton("Speichern");
         SpeicherButton.setFocusable(false);
@@ -100,5 +98,9 @@ public class gamePanel extends backgroundController {
     // gamePanel & dialogController verbindung
     public void setTextDialog(String text) {
         dialog.setText("<html><div style=\"width:480px;\">" + text + "</div><html>");
+    }
+    public void setSaveMenu(boolean escapePressed){
+    
+        savepanel.setVisible(escapePressed);
     }
 }

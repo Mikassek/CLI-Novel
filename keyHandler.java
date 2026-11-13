@@ -16,20 +16,22 @@ public class keyHandler implements KeyListener {
             enterPressed = true;
             dialogController.skipDialog();
         }
-    }
+        if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+            dialogController.gamePanel.setSaveMenu( !dialogController.gamePanel.savepanel.isVisible());
+            }
+        }
+    
 
     public void keyReleased(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_ENTER) {
             enterPressed = false;
+        }
+        if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
         }
     }
 
     public void keyTyped(KeyEvent e) {
     }
 
-    public void menu(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-          //  savepanel.setVisible(true);
-        }
-    }
+    
 }

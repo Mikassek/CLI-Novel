@@ -20,6 +20,7 @@ public class gamePanel extends backgroundController {
     JPanel savepanel;
     dialogController dialogController;
     choiseController choiseController;
+    saveGame save;
 
     public gamePanel() {
 
@@ -31,14 +32,11 @@ public class gamePanel extends backgroundController {
         savepanel.setVisible(false);
         add(savepanel, BorderLayout.NORTH);
         savepanel.setOpaque(false);
-
         JButton SpeicherButton = new JButton("Speichern");
         SpeicherButton.setBackground(Color.WHITE);
         SpeicherButton.setFocusable(false);
         savepanel.add(SpeicherButton);
         SpeicherButton.addActionListener(e -> {
-            saveGame save = new saveGame();
-            save.dialogController = dialogController;
             save.saveGameCreate();
             save.SaveGameWrite();
         });
@@ -47,7 +45,6 @@ public class gamePanel extends backgroundController {
         LadenButton.setFocusable(false);
         savepanel.add(LadenButton);
         LadenButton.addActionListener(e -> {
-            saveGame save = new saveGame();
             int index = save.SaveGameRead();
             dialogController.dialogIndex = index;
             dialogController.zeigeDialog();
@@ -58,7 +55,7 @@ public class gamePanel extends backgroundController {
         savepanel.add(leerenButton);
         leerenButton.addActionListener(e -> {
             try {
-                FileWriter SaveWrite = new FileWriter("savegame.txt");
+                FileWriter SaveWrite = new FileWriter("saves/savegame.txt");
                 SaveWrite.write("0");
                 SaveWrite.close();
                 System.out.println("Savegame gelöscht");
@@ -80,6 +77,10 @@ public class gamePanel extends backgroundController {
 
         dialogController = new dialogController(this);
         choiseController = dialogController.getChoiseController();
+
+        save = new saveGame();                      
+        save.dialogController = dialogController;   
+
 
         JPanel buttonPanel = new JPanel(new GridBagLayout());
         buttonPanel.setOpaque(false);

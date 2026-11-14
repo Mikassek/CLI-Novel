@@ -6,7 +6,7 @@ import java.nio.file.Path;
 
 public class saveGame {
     dialogController dialogController;
-    String savePath = "CLI-Novel/saves/savegame.txt";
+    String savePath = "saves/savegame.txt";
 
     public String getDialog() {
         int index_int = dialogController.dialogIndex;

@@ -1,20 +1,14 @@
 # CLI-Novel
 
-CLI visual novel made in Java.
+Visual Novel gemacht in Java.
 
 - Visual novel
-- Command-line dialogue and story
-- Press Enter to advance to the next line
-- Multiple choices with number keys
-- Decision thresholds
-- Save system
+- GUI Dialog
+- Enter um zur nächsten Zeile zu gelangen
+- Auswahlmöglichkeiten mit Knöpfen
+- Speichersystem
 
 ## Story
 
-- Nuclear winter survival
-- Three endings:
-  - Nuclear poisoning ending
-  - Hunger death
-  - Saved ending
-- Chelyabinsk
-- Point-of-view character
+- 2 Charactere: Yuki & Sora
+- Slice of Life / Drama

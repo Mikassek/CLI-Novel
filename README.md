@@ -6,7 +6,7 @@ Visual Novel gemacht in Java.
 - GUI Dialog
 - Enter um zur nächsten Zeile zu gelangen
 - Auswahlmöglichkeiten mit Knöpfen
-- Speichersystem
+- Speichersystem mit Escape
 
 ## Story
 

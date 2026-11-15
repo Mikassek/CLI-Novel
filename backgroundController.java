@@ -8,7 +8,6 @@ import javax.swing.JPanel;
 public class backgroundController extends JPanel {
 
     Image hintergrundbild;
-    String aktuellerHintergrund;
 
     public void setHintergrundbild(String dateiname) {
 
@@ -16,7 +15,6 @@ public class backgroundController extends JPanel {
 
         try {
             hintergrundbild = ImageIO.read(datei.toFile());
-            aktuellerHintergrund = dateiname;
             repaint();
         } catch (IOException e) {
             e.printStackTrace();
